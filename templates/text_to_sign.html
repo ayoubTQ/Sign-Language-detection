@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Sign Language</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Détection de Gestes</a>
+        <a href="{{ url_for('text_to_sign') }}">Texte en Signes</a>
+    </nav>
+    <h1>Transformer Texte en Langue des Signes</h1>
+    <form method="POST" action="{{ url_for('generate_sign_images') }}">
+        <div class="search-container">
+            <input type="text" name="text" placeholder="Convertir...">
+            <button type="submit">Convertir</button>
+        </div>
+    </form>
+    <div class="slider-container">
+        <button class="btn-prev">Précédent</button>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <div class="column">
+                    {% if sign_images %}
+                        {% for img in sign_images %}
+                            <img src="{{ img }}" alt="Sign">
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <button class="btn-next">Suivant</button>
+    </div>
+    <script src="{{ url_for('static', filename='script_.js') }}"></script>
+</body>
+</html>

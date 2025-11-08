@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    width: 83%; /* Adjust to fit buttons */
+    position: relative;
+    
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.column {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.column img {
+    flex: 0 0 auto;
+    margin: 0 5px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.btn-prev, .btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: #505250;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.btn-prev {
+    left: 10px;
+}
+
+.btn-next {
+    right: 10px;
+}
+
+.btn-prev.disabled, .btn-next.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-prev:hover, .btn-next:hover {
+    background-color: #505250;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 300px;
+}
+
+.search-container button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #505250;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button[type="submit"]:hover {
+    background-color: #505250;
+}

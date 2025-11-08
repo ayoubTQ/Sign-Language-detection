@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Sentence Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Détection de Gestes</a>
+        <a href="{{ url_for('text_to_sign') }}">Texte en Signes</a>
+    </nav>
+    <h1>Détection de Gestes en Temps Réel</h1>
+    <div class="container">
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" id="videoFeed">
+        </div>
+        <div class="text-container">
+            <p id="textDisplay"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
