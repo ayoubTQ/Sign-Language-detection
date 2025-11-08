@@ -23,7 +23,7 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR-USERNAME/Sign-Language-detection.git
+git clone https://github.com/ayoubTQ/Sign-Language-detection.git
 cd Sign-Language-detection
 ```
 
@@ -38,7 +38,6 @@ pip install flask opencv-python tensorflow numpy pillow
 Sign-Language-detection/
 ├── app.py                 # Main Flask application
 ├── dataCollection.py      # Script for collecting training data
-├── data/                 # Training data directory
 ├── model/               
 │   ├── keras_model.h5    # Trained model
 │   └── labels.txt        # Label definitions
